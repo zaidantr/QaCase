@@ -1,0 +1,33 @@
+============================================================
+FLOW 2 - TC-008
+Resolution Date Mandatory
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Hazard"
+
+- tapOn:
+    text: "Follow Up"
+
+- tapOn:
+    text: "Evidence"
+
+- tapOn:
+    text: "${IMAGE_NAME}"
+
+- tapOn:
+    text: "Submit"
+
+- assertVisible:
+    text: "Resolution Date"
+
+- assertVisible:
+    text: "required"
+
+- assertNotVisible:
+    text: "submitted successfully"

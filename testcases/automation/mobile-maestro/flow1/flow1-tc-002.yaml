@@ -1,0 +1,26 @@
+
+============================================================
+FLOW 1 - TC-002
+Offline -> Sync
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Equipment Inspection"
+
+- assertVisible:
+    text: "Pending Sync"
+
+# Reconnect network through device/test environment
+
+- waitForAnimationToEnd
+
+- assertVisible:
+    text: "Synced"
+
+- assertNotVisible:
+    text: "Pending Sync"

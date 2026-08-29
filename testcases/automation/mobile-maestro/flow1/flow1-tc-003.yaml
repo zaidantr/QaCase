@@ -1,0 +1,37 @@
+
+============================================================
+FLOW 1 - TC-003
+Field validation
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Equipment Inspection"
+
+- tapOn:
+    text: "New Submission"
+
+- assertVisible:
+    text: "Text"
+
+- assertVisible:
+    text: "Date"
+
+- assertVisible:
+    text: "Select"
+
+- assertVisible:
+    text: "Radio"
+
+- assertVisible:
+    text: "Image"
+
+- tapOn:
+    text: "Submit"
+
+- assertVisible:
+    text: "required"

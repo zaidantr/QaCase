@@ -1,0 +1,26 @@
+{
+  "name": "TC-002 - /user/who timeout",
+  "request": {
+    "method": "POST",
+    "header": [
+      {
+        "key": "Content-Type",
+        "value": "application/json"
+      }
+    ],
+    "body": {
+      "mode": "raw",
+      "raw": "{\n  \"username\": \"{{validUsername}}\"\n}"
+    },
+    "url": {
+      "raw": "{{baseUrl}}/user/who",
+      "host": [
+        "{{baseUrl}}"
+      ],
+      "path": [
+        "user",
+        "who"
+      ]
+    }
+  }
+}

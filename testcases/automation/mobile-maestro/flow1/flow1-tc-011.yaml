@@ -1,0 +1,35 @@
+============================================================
+FLOW 1 - TC-011
+Large Select
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Equipment Inspection"
+
+- tapOn:
+    text: "New Submission"
+
+- tapOn:
+    text: "Location"
+
+- assertVisible:
+    text: "Search"
+
+- tapOn:
+    text: "Search"
+
+- inputText: "${LOCATION}"
+
+- assertVisible:
+    text: "${LOCATION}"
+
+- tapOn:
+    text: "${LOCATION}"
+
+- assertVisible:
+    text: "${LOCATION}"

@@ -1,0 +1,42 @@
+============================================================
+FLOW 2 - TC-011
+Offline Follow-up
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Hazard"
+
+- tapOn:
+    text: "Follow Up"
+
+- tapOn:
+    text: "Evidence"
+
+- tapOn:
+    text: "${IMAGE_NAME}"
+
+- tapOn:
+    text: "Resolution Date"
+
+- tapOn:
+    text: "${RESOLUTION_DATE}"
+
+- tapOn:
+    text: "Co Observer"
+
+- tapOn:
+    text: "${OBSERVER_1}"
+
+- tapOn:
+    text: "Submit"
+
+- assertVisible:
+    text: "Pending Sync"
+
+- assertNotVisible:
+    text: "Submission failed"

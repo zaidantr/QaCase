@@ -1,0 +1,18 @@
+============================================================
+FLOW 2 - TC-012
+Pending vs Synced Hazard
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Hazard"
+
+- assertVisible:
+    text: "Pending Sync"
+
+- assertVisible:
+    text: "Synced"

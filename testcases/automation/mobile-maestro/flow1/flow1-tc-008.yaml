@@ -1,0 +1,36 @@
+============================================================
+FLOW 1 - TC-008
+Image with poor connection
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Equipment Inspection"
+
+- tapOn:
+    text: "New Submission"
+
+- tapOn:
+    text: "Image"
+
+- tapOn:
+    text: "Choose from Gallery"
+
+- tapOn:
+    text: "${IMAGE_NAME}"
+
+- assertVisible:
+    text: "Image"
+
+- tapOn:
+    text: "Submit"
+
+- assertVisible:
+    text: "Pending Sync"
+
+- assertNotVisible:
+    text: "Submission failed"

@@ -1,0 +1,23 @@
+============================================================
+FLOW 0 - TC-001
+Sign in with no internet connection at all
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+- disableAirplaneMode: false  # ensure clean state before forcing offline
+- setAirplaneMode: true
+- tapOn:
+    id: "username_input"
+- inputText: "test.user@wemine.com"
+- tapOn:
+    id: "submit_button"
+# Expected: a clear connection error is shown, no infinite loading, no crash
+- assertVisible:
+    id: "connection_error_message"
+- assertNotVisible:
+    id: "loading_spinner"
+- setAirplaneMode: false  # reset state for the next test in the suite
+ 

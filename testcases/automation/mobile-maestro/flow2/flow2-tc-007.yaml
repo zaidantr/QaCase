@@ -1,0 +1,42 @@
+============================================================
+FLOW 2 - TC-007
+Multiple Co Observers
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Hazard"
+
+- tapOn:
+    text: "Follow Up"
+
+- tapOn:
+    text: "Co Observer"
+
+- tapOn:
+    text: "+"
+
+- tapOn:
+    text: "${OBSERVER_1}"
+
+- tapOn:
+    text: "+"
+
+- tapOn:
+    text: "${OBSERVER_2}"
+
+- assertVisible:
+    text: "${OBSERVER_1}"
+
+- assertVisible:
+    text: "${OBSERVER_2}"
+
+- tapOn:
+    text: "Submit"
+
+- assertVisible:
+    text: "submitted successfully"

@@ -1,0 +1,54 @@
+============================================================
+FLOW 2 - TC-001
+Offline Hazard Report
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Hazard"
+
+- tapOn:
+    text: "Report Hazard"
+
+- tapOn:
+    text: "Location"
+
+- tapOn:
+    text: "${LOCATION}"
+
+- tapOn:
+    text: "Sublocation"
+
+- tapOn:
+    text: "${SUBLOCATION}"
+
+- tapOn:
+    text: "Area"
+
+- tapOn:
+    text: "${AREA}"
+
+- tapOn:
+    text: "PIC"
+
+- assertVisible:
+    text: "${REPORTER_NAME}"
+
+- tapOn:
+    text: "Evidence"
+
+- tapOn:
+    text: "${IMAGE_NAME}"
+
+- tapOn:
+    text: "Submit"
+
+- assertVisible:
+    text: "Pending Sync"
+
+- assertNotVisible:
+    text: "Submission failed"

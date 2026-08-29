@@ -1,0 +1,33 @@
+============================================================
+FLOW 1 - TC-001
+Offline Equipment Inspection
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Equipment Inspection"
+
+- tapOn:
+    text: "New Submission"
+
+- assertVisible:
+    text: "Form Code"
+
+- tapOn:
+    text: "Form Code"
+
+- tapOn:
+    text: "${FORM_CODE}"
+
+- tapOn:
+    text: "Submit"
+
+- assertVisible:
+    text: "Pending Sync"
+
+- assertNotVisible:
+    text: "Submission failed"

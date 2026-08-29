@@ -1,0 +1,18 @@
+============================================================
+FLOW 1 - TC-009
+Pending vs Synced
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Equipment Inspection"
+
+- assertVisible:
+    text: "Pending Sync"
+
+- assertVisible:
+    text: "Synced"

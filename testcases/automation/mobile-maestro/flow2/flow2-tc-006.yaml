@@ -1,0 +1,27 @@
+============================================================
+FLOW 2 - TC-006
+PIC Pre-selected
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Hazard"
+
+- tapOn:
+    text: "Report Hazard"
+
+- assertVisible:
+    text: "${REPORTER_NAME}"
+
+- tapOn:
+    text: "PIC"
+
+- tapOn:
+    text: "${OTHER_EMPLOYEE}"
+
+- assertVisible:
+    text: "${OTHER_EMPLOYEE}"

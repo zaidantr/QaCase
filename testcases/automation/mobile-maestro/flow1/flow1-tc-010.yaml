@@ -1,0 +1,24 @@
+============================================================
+FLOW 1 - TC-010
+Mandatory field
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Equipment Inspection"
+
+- tapOn:
+    text: "New Submission"
+
+- tapOn:
+    text: "Submit"
+
+- assertVisible:
+    text: "required"
+
+- assertNotVisible:
+    text: "Submitted successfully"

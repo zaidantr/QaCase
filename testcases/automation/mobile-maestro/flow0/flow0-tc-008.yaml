@@ -1,0 +1,34 @@
+============================================================
+FLOW 0 - TC-008
+Wrong Microsoft password
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Username"
+
+- inputText: ${USERNAME}
+
+- tapOn:
+    text: "Continue"
+
+- assertVisible:
+    text: "Microsoft"
+
+- tapOn:
+    text: "Password"
+
+- inputText: "wrong-password"
+
+- tapOn:
+    text: "Sign in"
+
+- assertVisible:
+    text: "incorrect|invalid|wrong"
+
+- assertVisible:
+    text: "Password"

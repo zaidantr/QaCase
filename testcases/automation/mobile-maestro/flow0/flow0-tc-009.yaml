@@ -1,0 +1,29 @@
+============================================================
+FLOW 0 - TC-009
+Cancel Microsoft login
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Username"
+
+- inputText: ${USERNAME}
+
+- tapOn:
+    text: "Continue"
+
+- assertVisible:
+    text: "Microsoft"
+
+- tapOn:
+    text: "Cancel"
+
+- assertVisible:
+    text: "Username"
+
+- assertNotVisible:
+    text: "Something went wrong"

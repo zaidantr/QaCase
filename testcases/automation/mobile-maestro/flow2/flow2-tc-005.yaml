@@ -1,0 +1,24 @@
+============================================================
+FLOW 2 - TC-005
+Mandatory Hazard Field
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Hazard"
+
+- tapOn:
+    text: "Report Hazard"
+
+- tapOn:
+    text: "Submit"
+
+- assertVisible:
+    text: "required"
+
+- assertNotVisible:
+    text: "Hazard submitted"

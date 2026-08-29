@@ -1,0 +1,29 @@
+============================================================
+FLOW 0 - TC-007
+Re-login after long offline period
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- assertVisible:
+    text: "Login"
+
+- tapOn:
+    text: "Username"
+
+- inputText: ${USERNAME}
+
+- tapOn:
+    text: "Continue"
+
+- assertVisible:
+    text: "Microsoft"
+
+- tapOn:
+    text: "Cancel"
+
+- assertVisible:
+    text: "Username"

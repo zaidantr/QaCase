@@ -1,0 +1,25 @@
+============================================================
+FLOW 2 - TC-002
+Offline -> Sync
+============================================================
+
+appId: ${APP_ID}
+
+---
+- launchApp
+
+- tapOn:
+    text: "Hazard"
+
+- assertVisible:
+    text: "Pending Sync"
+
+# Reconnect network
+
+- waitForAnimationToEnd
+
+- assertVisible:
+    text: "Synced"
+
+- assertNotVisible:
+    text: "Pending Sync"
