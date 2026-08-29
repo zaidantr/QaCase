@@ -15,7 +15,6 @@ Two characteristics show up as explicit requirements for the whole product, so I
 
 ## Repository structure
 
-```ini
 ## Project Structure
 
 ```text
