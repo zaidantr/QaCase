@@ -32,8 +32,6 @@ Two characteristics show up as explicit requirements for the whole product, so I
     ├── web-playwright/
     │   ├── tests/
     │   │   └── *.spec.ts
-    │   └── pages/
-    │       └── *.page.ts
     │
     ├── api-newman/
     │   ├── collections/

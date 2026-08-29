@@ -45,10 +45,8 @@ automation/
 | Folder                | Purpose                                     |
 | --------------------- | ------------------------------------------- |
 | `playwright/tests`    | Playwright test scenarios                   |
-| `playwright/pages`    | Page Object classes and reusable UI actions |
 | `newman/collections`  | Postman API collections executed by Newman  |
 | `newman/environments` | Environment variables for API testing       |
-| `newman/reports`      | Generated API test reports                  |
 | `maestro/flows`       | Maestro mobile test flows                   |
 
 ## Test Coverage

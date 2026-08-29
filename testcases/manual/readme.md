@@ -8,4 +8,4 @@ The cases lean heavily into the two characteristics called out as core to this p
 - [Flow 1 — Equipment Inspection Form](./flow1-equipment-inspection-form.md)
 - [Flow 2 — Safety Hazard Report](./flow2-safety-hazard-report.md)
 
-For the reasoning behind the repository structure and the tool choices across all three flows together, see the [root README](../README.md).
+For the reasoning behind the repository structure and the tool choices across all three flows together, see the [root README](../readme.md).
