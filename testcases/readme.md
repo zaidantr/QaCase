@@ -19,29 +19,28 @@ Two characteristics show up as explicit requirements for the whole product, so I
 
 ```text
 .
-├── README.md                          # Project documentation
+├── .gitignore
+├── case.md
+├── readme.md                           # Root documentation
 │
-├── testcases/
-│   ├── readme.md                      # Index of all test cases
-│   ├── flow0-sign-in.md
-│   ├── flow1-equipment-inspection-form.md
-│   └── flow2-safety-hazard-report.md
-│
-└── automation/
-    ├── web-playwright/
-    │   ├── tests/
-    │   │   └── *.spec.ts
+└── testcases/
+    ├── readme.md                       # Index for all test cases
     │
-    ├── api-newman/
-    │   ├── collections/
-    │   │   └── *.postman_collection.json
-    │   ├── environments/
-    │   │   └── *.postman_environment.json
-    │   └── reports/
+    ├── automation/
+    │   ├── api-newman/
+    │   ├── mobile-maestro/
+    │   ├── web-playwright/
+    │   │   └── tests/
+    │   └── readme.md                   # Documentation for automation
     │
-    └── mobile-maestro/
-        └── flows/
-            └── *.yaml
+    └── manual/
+        ├── flow0-sign-in.md
+        ├── flow0_signin_userflow.png
+        ├── flow1-equipment-inspection-form.md
+        ├── flow1_equipment_inspection_userflow.png
+        ├── flow2-safety-hazard-report.md
+        ├── flow2_safety_hazard_userflow.png
+        └── readme.md                   # Documentation for manual test cases
 ```
 
 ## Test cases
@@ -73,4 +72,5 @@ The same three tools cover all three flows, chosen per layer rather than per flo
 For validating offline state specifically (pending submissions, queued reports), I'd also check the local storage/DB on the device directly via adb/device shell rather than relying only on what the UI shows, since a UI showing the right thing doesn't guarantee the underlying data is actually correct or won't be lost.
 
 ## Explanation Video
+
 [▶️ Watch WeMine Explanation Video](https://drive.google.com/file/d/11rco5n2f2NoPN7e5KJyDym9jH09JU1B8/view?usp=sharing)
