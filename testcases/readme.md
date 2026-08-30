@@ -71,3 +71,6 @@ The same three tools cover all three flows, chosen per layer rather than per flo
 - **Postman/Newman** for the API layer — most of the backend-focused cases need direct control at the service level (simulating one service failing without touching the others, or asserting exact response payloads like notification content), which is faster and more precise at the API layer than driving the same check through the UI.
 
 For validating offline state specifically (pending submissions, queued reports), I'd also check the local storage/DB on the device directly via adb/device shell rather than relying only on what the UI shows, since a UI showing the right thing doesn't guarantee the underlying data is actually correct or won't be lost.
+
+## Explanation Video
+[▶️ Watch WeMine Explanation Video](https://drive.google.com/file/d/11rco5n2f2NoPN7e5KJyDym9jH09JU1B8/view?usp=sharing)
